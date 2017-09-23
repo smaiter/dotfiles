@@ -1,0 +1,13 @@
+!235
+URxvt*background:#262626
+!187
+URxvt*foreground:#dfdfaf
+
+URxvt*colorBD:#ffffff
+
+URxvt.font: xft:monospace:style=Regular:size=8
+URxvt.boldFont: xft:monospace:style=Bold:size=8
+URxvt.scrollstyle: plain
+URxvt.lineSpace:-1
+URxvt.letterSpace:-2
+URxvt.cursorBlink:True
