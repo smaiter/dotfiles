@@ -17,7 +17,7 @@ autoload -U colors && colors
 #   FREE_SPACE=$(df -h | egrep /sda6 | awk {'print $4'});
 #   echo $FREE_SPACE $BAT_CHARG%% 
 # }
-PROMPT="%{$fg_bold[green]%}[%2/]%# %b"
+PROMPT="%{$fg_bold[cyan]%}[%2/]%# %b"
 #RPROMPT=$(statusbar)
 #}
 
@@ -30,7 +30,7 @@ setopt AUTO_CD
 #to correct incorrectly typed commands
 setopt CORRECT_ALL
 
-export LS_COLORS='no=00:fi=00;37:di=38;5;111;1:ln=04;36:pi=33:so=01;35:do=01;35:bd=33;01:cd=33;01:or=31;01:su=37:sg=30:tw=30:ow=34:st=37:ex=00;31:*.mp4=38;5;212:*.mkv=38;5;212:*.pdf=00;33:*.djvu=00;33:*.txt=00;33:*.c=01;31:'
+export LS_COLORS='no=00:fi=00;37:di=1;34:ln=04;36:pi=33:so=01;35:do=01;35:bd=33;01:cd=33;01:or=31;01:su=37:sg=30:tw=30:ow=34:st=37:ex=00;31:*.mp4=35:*.mkv=35:*.pdf=33:*.djvu=33:*.txt=33:*.c=01;31:'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 #alias -s
