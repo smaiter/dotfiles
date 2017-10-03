@@ -1,5 +1,12 @@
 call plug#begin('~/.vim/plugged')
-
+Plug 'dracula/vim' " color scheme
+Plug 'morhetz/gruvbox'
+Plug 'romainl/Apprentice' " color scheme
+Plug 'sjl/badwolf'
+Plug 'w0ng/vim-hybrid' " color scheme
+Plug 'junegunn/seoul256.vim' " color sheme
+Plug 'sickill/vim-monokai' " color scheme
+"Plug 'chriskempson/base16-vim'
 "Plug 'valloric/youcompleteme'
 "Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 "Plug 'jiangmiao/auto-pairs'
@@ -34,7 +41,7 @@ set hidden
 set history=100
 
 syntax on
-"colorscheme gruvbox
+colorscheme gruvbox
 set background=dark
 
 set hlsearch

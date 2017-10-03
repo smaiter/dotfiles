@@ -1,13 +1,74 @@
 !235
-URxvt*background:#262626
+!URxvt*background:#262626
 !187
-URxvt*foreground:#dfdfaf
+!URxvt*foreground:#dfdfaf
 
-URxvt*colorBD:#ffffff
+!URxvt*colorBD:#ffffff
 
 URxvt.font: xft:monospace:style=Regular:size=8
 URxvt.boldFont: xft:monospace:style=Bold:size=8
 URxvt.scrollstyle: plain
-URxvt.lineSpace:-1
-URxvt.letterSpace:-2
+!URxvt.lineSpace:-1
+URxvt.letterSpace:-1
 URxvt.cursorBlink:True
+
+!Background color
+!URxvt*background: black
+
+! Цвет шрифта
+!URxvt*foreground: white
+! -----------------------------------------------------------------------------
+! ! File: gruvbox-dark.xresources
+! ! Description: Retro groove colorscheme generalized
+! ! Author: morhetz <morhetz@gmail.com>
+! ! Source: https://github.com/morhetz/gruvbox-generalized
+! ! Last Modified: 6 Sep 2014
+! ! -----------------------------------------------------------------------------
+
+! ! hard contrast: *background: #1d2021
+ *background: #282828
+! ! soft contrast: *background: #32302f
+ *foreground: #ebdbb2
+! ! Black + DarkGrey
+ *color0:  #282828
+ *color8:  #928374
+! ! DarkRed + Red
+ *color1:  #cc241d
+ *color9:  #fb4934
+! ! DarkGreen + Green
+ *color2:  #98971a
+ *color10: #b8bb26
+! ! DarkYellow + Yellow
+ *color3:  #d79921
+ *color11: #fabd2f
+! ! DarkBlue + Blue
+ *color4:  #458588
+ *color12: #83a598
+! ! DarkMagenta + Magenta
+ *color5:  #b16286
+ *color13: #d3869b
+! ! DarkCyan + Cyan
+ *color6:  #689d6a
+ *color14: #8ec07c
+! ! LightGrey + White
+ *color7:  #a89984
+ *color15: #ebdbb2
+
+! Другие цвета
+!URxvt*color0: blue
+!URxvt*color1: red 
+!URxvt*color2: green
+!URxvt*color3: grey
+!URxvt*color4: yellow
+!URxvt*color5: magenta
+!URxvt*color6: cyan
+!URxvt*color7: green
+!URxvt*color8: green
+!URxvt*color9: green
+!URxvt*color10: green
+!URxvt*color11: green
+!URxvt*color12: green
+!URxvt*color13: green
+!URxvt*color14: green
+!URxvt*color15: green
+
