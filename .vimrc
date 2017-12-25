@@ -18,6 +18,7 @@ call plug#end()
 "fix .cpp error: ValueError: Still no compile flags, no completions yet.
 "let g:ycm_global_ycm_extra_conf='~/microcontroller/stm32f103x/proj7_C_emacs_working/.ycm_extra_conf.py'
 
+
 autocmd VimEnter * hi Normal ctermbg=none
 
 set nocompatible
@@ -47,10 +48,19 @@ set background=dark
 set hlsearch
 set incsearch
 
+"enable Elite mode, no arrows
+let g:elite_mode=1
+
 "project settings
 set path+=./inc
-"mapings
-nmap MK :make
-nmap MC :make clean<CR>
+
+"MAPINGS
+"build mappings
+map <f8> :w <CR> :silent make<CR> :silent !clear<CR> :!make <CR>
+map <f9> :w <CR> :silent make<CR> :silent !clear<CR> :!make && clear && ./a.out<CR>
+"nmap MK :make
+"nmap MC :make clean<CR>
+
+"other mappings
 map tn :tabnew
 "map <C-n> :NERDTreeToggle<CR>
