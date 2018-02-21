@@ -19,8 +19,8 @@ exec --no-startup-id xmodmap .xmodmaprc
 
 
 ###---SETTINGS---###
-for_window [class=".*"] border pixel2
-font pango:xos4 Terminus 8
+for_window [class=".*"] border pixel1
+font pango:xos4 Terminus 7
 
 ###---SCRATCHPAD---####
 for_window [instance="dropdown"] floating enable
@@ -28,6 +28,10 @@ for_window [instance="dropdown"] resize set 800 500
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 exec --no-startup-id $term -name dropdown -e tmux
+
+###---GAPS---###
+gaps inner 7
+gaps outer 0
 
 ###---KEYBINDS---###
 #LETTER KEYBINDS
