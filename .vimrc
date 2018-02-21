@@ -20,6 +20,7 @@ call plug#end()
 
 
 autocmd VimEnter * hi Normal ctermbg=none
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro "disable autocomment options, help fo-tables
 
 set nocompatible
 set ruler
@@ -34,13 +35,14 @@ set wrap
 set linebreak
 set ignorecase
 set smartcase
+set infercase "dont ignor case in keyword completion
 "set cursorline
 set wildmenu
 set wildmode=list:longest,list:full
 set showcmd
 set hidden
 set history=100
-
+set foldmethod=syntax
 syntax on
 colorscheme gruvbox
 set background=dark
@@ -49,12 +51,22 @@ set hlsearch
 set incsearch
 
 "enable Elite mode, no arrows
-let g:elite_mode=1
+"let g:elite_mode=1 "dont work for me
 
 "project settings
 set path+=./inc
 
 "MAPINGS
+"no arrows in Escape mode
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+"no arrows in Insert mode
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 "build mappings
 map <f8> :w <CR> :silent make<CR> :silent !clear<CR> :!make <CR>
 map <f9> :w <CR> :silent make<CR> :silent !clear<CR> :!make && clear && ./a.out<CR>
