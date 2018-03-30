@@ -1,7 +1,7 @@
 export EDITOR='vim'
 #source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241';
+#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241';
 #autocompletitions and path autocompl. ex cd /u/sh in cd /user/share
 autoload -U compinit && compinit
 compinit
@@ -58,6 +58,10 @@ setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_reduce_blanks
 
+#Search in command mode
+bindkey -M vicmd '?' history-incremental-search-backward
+bindkey -M vicmd '/' history-incremental-search-forward
+ 
 #colors
 export LS_COLORS='no=00:fi=00;37:di=1;34:ln=04;36:pi=33:so=01;35:do=01;35:bd=33;01:cd=33;01:or=31;01:su=37:sg=30:tw=30:ow=34:st=37:ex=00;31:*.mp4=35:*.mkv=35:*.pdf=33:*.djvu=33:*.txt=33:*.c=01;31:*.h=00;34:'
 zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
@@ -101,6 +105,9 @@ tre()
 #func translate all dictionary
 tra()
 { tra_v $1 | more;}
+
+#aliases for programming
+alias agdb='st-util & arm-none-eabi-gdb --se=out/main.elf -ex "tar ext localhost:4242"' #run st-util, arm-none-eabi-gdb with elf and connect to target
 
 #aliases for mocp
 alias moi='mocp -i | grep -i ^title' #mocp a song title info
