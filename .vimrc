@@ -1,4 +1,8 @@
 call plug#begin('~/.vim/plugged')
+"snippets plugin
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'christoomey/vim-tmux-navigator'
 Plug 'dracula/vim' " color scheme
 Plug 'morhetz/gruvbox'
 Plug 'romainl/Apprentice' " color scheme
@@ -42,10 +46,19 @@ set wildmode=list:longest,list:full
 set showcmd
 set hidden
 set history=100
-set foldmethod=syntax
+set foldmethod=manual
+
+set listchars=tab:▸\ ,eol:¬
+	
+"provide tab-completion for all file-related task
+set path+=**
+
 syntax on
 colorscheme gruvbox
 set background=dark
+
+"highlight the mode indicator with bright green fg
+hi ModeMsg cterm=bold ctermbg=46 ctermfg=232
 
 set hlsearch
 set incsearch
@@ -54,7 +67,10 @@ set incsearch
 "let g:elite_mode=1 "dont work for me
 
 "project settings
-set path+=./inc
+"set path=inc
+
+"Ultisnips config
+let g:UltiSnipsSnippetDirectories=['~/.vim/UltiSnips/', 'UltiSnips']
 
 "MAPINGS
 "no arrows in Escape mode
